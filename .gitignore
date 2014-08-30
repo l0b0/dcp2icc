@@ -1,0 +1,5 @@
+build/
+dng_sdk_*/
+lcms-*/
+.sconsign.dblite
+XMP-Toolkit-SDK-*/
