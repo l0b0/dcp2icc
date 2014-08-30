@@ -1,0 +1,73 @@
+
+fixdng="fixes/dng_sdk"
+origdng="dng_sdk_1_2/dng_sdk/source"
+origXMP="XMP-Toolkit-SDK-4.4.2"
+fixXMP="fixes/XMP-Toolkit"
+
+Import("env")
+
+env=env.Clone(CPPPATH=[fixdng,fixXMP,origdng,origXMP+"/public/include"])
+
+VariantDir("build/dng",origdng,duplicate=0)
+VariantDir("build/fixes/dng",fixdng,duplicate=0)
+
+flist=[
+	"build/dng/dng_1d_function.cpp",
+	"build/dng/dng_1d_table.cpp",
+	"build/dng/dng_abort_sniffer.cpp",
+	"build/dng/dng_area_task.cpp",
+	"build/dng/dng_bottlenecks.cpp",
+	"build/dng/dng_camera_profile.cpp",
+	"build/dng/dng_color_space.cpp",
+	"build/dng/dng_color_spec.cpp",
+	"build/fixes/dng/dng_date_time.cpp",
+	"build/dng/dng_exceptions.cpp",
+	"build/dng/dng_exif.cpp",
+	"build/dng/dng_file_stream.cpp",
+	"build/dng/dng_filter_task.cpp",
+	"build/dng/dng_fingerprint.cpp",
+	"build/dng/dng_globals.cpp",
+	"build/dng/dng_host.cpp",
+	"build/dng/dng_hue_sat_map.cpp",
+	"build/dng/dng_ifd.cpp",
+	"build/dng/dng_image.cpp",
+	"build/dng/dng_image_writer.cpp",
+	"build/dng/dng_info.cpp",
+	"build/dng/dng_iptc.cpp",
+	"build/dng/dng_linearization_info.cpp",
+	"build/dng/dng_lossless_jpeg.cpp",
+	"build/dng/dng_matrix.cpp",
+	"build/dng/dng_memory.cpp",
+	"build/dng/dng_memory_stream.cpp",
+	"build/dng/dng_mosaic_info.cpp",
+	"build/dng/dng_mutex.cpp",
+	"build/dng/dng_negative.cpp",
+	"build/dng/dng_orientation.cpp",
+	"build/dng/dng_parse_utils.cpp",
+	"build/dng/dng_pixel_buffer.cpp",
+	"build/dng/dng_point.cpp",
+	"build/dng/dng_preview.cpp",
+	"build/fixes/dng/dng_pthread.cpp",
+	"build/dng/dng_rational.cpp",
+	"build/dng/dng_read_image.cpp",
+	"build/dng/dng_rect.cpp",
+	"build/dng/dng_reference.cpp",
+	"build/dng/dng_render.cpp",
+	"build/dng/dng_resample.cpp",
+	"build/dng/dng_shared.cpp",
+	"build/dng/dng_simple_image.cpp",
+	"build/dng/dng_spline.cpp",
+	"build/dng/dng_stream.cpp",
+	"build/dng/dng_string.cpp",
+	"build/dng/dng_string_list.cpp",
+	"build/dng/dng_tag_types.cpp",
+	"build/dng/dng_temperature.cpp",
+	"build/dng/dng_tile_iterator.cpp",
+	"build/dng/dng_tone_curve.cpp",
+	"build/dng/dng_utils.cpp",
+	"build/dng/dng_xmp.cpp",
+	"build/dng/dng_xmp_sdk.cpp",
+	"build/dng/dng_xy_coord.cpp",
+]
+
+env.Library(target="build/dng_1_2",source=flist)

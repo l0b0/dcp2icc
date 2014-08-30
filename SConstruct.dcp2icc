@@ -1,0 +1,13 @@
+   
+fixdng="fixes/dng_sdk"
+origdng="dng_sdk_1_2/dng_sdk/source"
+
+Import("env")
+
+env=env.Clone(CPPPATH=["dcp2icc.src",fixdng,origdng,env["LCMS_INCLUDE"]],
+	LIBPATH=["build"])
+
+VariantDir("build/dcp2icc","dcp2icc.src",duplicate=0)
+
+env.Program(target="dcp2icc",source=["build/dcp2icc/dcp2icc.cpp", "build/dcp2icc/matrix.cpp", "build/dcp2icc/sampler.cpp"])
+

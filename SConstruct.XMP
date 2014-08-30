@@ -1,0 +1,93 @@
+
+origXMP="XMP-Toolkit-SDK-4.4.2"
+fixXMP="fixes/XMP-Toolkit"
+
+Import("env")
+
+env=env.Clone(CPPPATH=[fixXMP,
+		origXMP+"/build",
+		origXMP+"/source/common",
+		origXMP+"/source/XMPCore",
+		origXMP+"/source/XMPFiles",
+		origXMP+"/source/XMPFiles/FileHandlers",
+		origXMP+"/source/XMPFiles/FormatSupport",
+		origXMP+"/third-party/MD5",
+		origXMP+"/public/include"])
+
+VariantDir("build/XMP",origXMP,duplicate=0)
+VariantDir("build/fixes/XMP",fixXMP,duplicate=0)
+
+flist_common=[
+	"build/XMP/source/common/LargeFileAccess.cpp",
+	"build/XMP/source/common/UnicodeConversions.cpp",
+	"build/XMP/source/common/XML_Node.cpp",
+	"build/XMP/third-party/MD5/MD5.cpp",
+]
+
+flist_Core=["build/XMP/source/XMPCore/ExpatAdapter.cpp",
+	"build/XMP/source/XMPCore/ParseRDF.cpp",
+	"build/XMP/source/XMPCore/WXMPIterator.cpp",
+	"build/XMP/source/XMPCore/WXMPMeta.cpp",
+	"build/XMP/source/XMPCore/WXMPUtils.cpp",
+	"build/XMP/source/XMPCore/XMPCore_Impl.cpp",
+	"build/XMP/source/XMPCore/XMPIterator.cpp",
+	"build/XMP/source/XMPCore/XMPMeta.cpp",
+	"build/XMP/source/XMPCore/XMPMeta-GetSet.cpp",
+	"build/XMP/source/XMPCore/XMPMeta-Parse.cpp",
+	"build/XMP/source/XMPCore/XMPMeta-Serialize.cpp",
+	"build/XMP/source/XMPCore/XMPUtils.cpp",
+	"build/XMP/source/XMPCore/XMPUtils-FileInfo.cpp",
+]
+
+flist_Files=[
+	"build/XMP/source/XMPFiles/FileHandlers/ASF_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/AVCHD_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/AVI_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/Basic_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/FLV_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/InDesign_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/JPEG_Handler.cpp",
+#	"build/XMP/source/XMPFiles/FileHandlers/MOV_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/MP3_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/MPEG2_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/MPEG4_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/P2_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/PNG_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/PostScript_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/PSD_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/Scanner_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/SonyHDV_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/SWF_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/TIFF_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/Trivial_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/UCF_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/WAV_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/XDCAMEX_Handler.cpp",
+	"build/XMP/source/XMPFiles/FileHandlers/XDCAM_Handler.cpp",
+
+	"build/XMP/source/XMPFiles/FormatSupport/ASF_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/ID3_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/IPTC_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/PNG_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/PSIR_FileWriter.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/PSIR_MemoryReader.cpp",
+#	"build/XMP/source/XMPFiles/FormatSupport/QuickTime_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/Reconcile_Impl.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/ReconcileIPTC.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/ReconcileLegacy.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/ReconcileTIFF.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/RIFF_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/SWF_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/TIFF_FileWriter.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/TIFF_MemoryReader.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/TIFF_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/XDCAM_Support.cpp",
+	"build/XMP/source/XMPFiles/FormatSupport/XMPScanner.cpp",
+	"build/XMP/source/XMPFiles/WXMPFiles.cpp",
+	"build/fixes/XMP/XMPFiles.cpp",
+	"build/fixes/XMP/XMPFiles_Impl.cpp",
+]
+
+env.Library(target="build/XMPcommon-4.4.2",source=flist_common)
+env.Library(target="build/XMPFiles-4.4.2",source=flist_Files)
+env.Library(target="build/XMPCore-4.4.2",source=flist_Core)
