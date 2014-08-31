@@ -1,7 +1,7 @@
 
 fixdng="fixes/dng_sdk"
 origdng="dng_sdk_1_2/dng_sdk/source"
-origXMP="XMP-Toolkit-SDK-4.4.2"
+origXMP="XMP-Toolkit-SDK-CC201306"
 fixXMP="fixes/XMP-Toolkit"
 
 Import("env")

@@ -1,5 +1,5 @@
 
-origXMP="XMP-Toolkit-SDK-4.4.2"
+origXMP="XMP-Toolkit-SDK-CC201306"
 fixXMP="fixes/XMP-Toolkit"
 
 Import("env")
@@ -7,7 +7,7 @@ Import("env")
 env=env.Clone(CPPPATH=[fixXMP,
 		origXMP+"/build",
 		origXMP+"/source/common",
-		origXMP+"/source/XMPCore",
+		origXMP+"/XMPCore/source",
 		origXMP+"/source/XMPFiles",
 		origXMP+"/source/XMPFiles/FileHandlers",
 		origXMP+"/source/XMPFiles/FormatSupport",
@@ -24,19 +24,19 @@ flist_common=[
 	"build/XMP/third-party/MD5/MD5.cpp",
 ]
 
-flist_Core=["build/XMP/source/XMPCore/ExpatAdapter.cpp",
-	"build/XMP/source/XMPCore/ParseRDF.cpp",
-	"build/XMP/source/XMPCore/WXMPIterator.cpp",
-	"build/XMP/source/XMPCore/WXMPMeta.cpp",
-	"build/XMP/source/XMPCore/WXMPUtils.cpp",
-	"build/XMP/source/XMPCore/XMPCore_Impl.cpp",
-	"build/XMP/source/XMPCore/XMPIterator.cpp",
-	"build/XMP/source/XMPCore/XMPMeta.cpp",
-	"build/XMP/source/XMPCore/XMPMeta-GetSet.cpp",
-	"build/XMP/source/XMPCore/XMPMeta-Parse.cpp",
-	"build/XMP/source/XMPCore/XMPMeta-Serialize.cpp",
-	"build/XMP/source/XMPCore/XMPUtils.cpp",
-	"build/XMP/source/XMPCore/XMPUtils-FileInfo.cpp",
+flist_Core=["build/XMP/XMPCore/source/ExpatAdapter.cpp",
+	"build/XMP/XMPCore/source/ParseRDF.cpp",
+	"build/XMP/XMPCore/source/WXMPIterator.cpp",
+	"build/XMP/XMPCore/source/WXMPMeta.cpp",
+	"build/XMP/XMPCore/source/WXMPUtils.cpp",
+	"build/XMP/XMPCore/source/XMPCore_Impl.cpp",
+	"build/XMP/XMPCore/source/XMPIterator.cpp",
+	"build/XMP/XMPCore/source/XMPMeta.cpp",
+	"build/XMP/XMPCore/source/XMPMeta-GetSet.cpp",
+	"build/XMP/XMPCore/source/XMPMeta-Parse.cpp",
+	"build/XMP/XMPCore/source/XMPMeta-Serialize.cpp",
+	"build/XMP/XMPCore/source/XMPUtils.cpp",
+	"build/XMP/XMPCore/source/XMPUtils-FileInfo.cpp",
 ]
 
 flist_Files=[
@@ -88,6 +88,6 @@ flist_Files=[
 	"build/fixes/XMP/XMPFiles_Impl.cpp",
 ]
 
-env.Library(target="build/XMPcommon-4.4.2",source=flist_common)
-env.Library(target="build/XMPFiles-4.4.2",source=flist_Files)
-env.Library(target="build/XMPCore-4.4.2",source=flist_Core)
+env.Library(target="build/XMPcommon-CC-201306",source=flist_common)
+env.Library(target="build/XMPFiles-CC-201306",source=flist_Files)
+env.Library(target="build/XMPCore-CC-201306",source=flist_Core)
