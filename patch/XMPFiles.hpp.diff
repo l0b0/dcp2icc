@@ -1,0 +1,11 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPFiles/XMPFiles.hpp.orig	2014-09-02 23:34:12.941449103 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPFiles/XMPFiles.hpp	2014-09-02 23:35:01.367083047 +0100
+@@ -15,7 +15,7 @@
+ #define TXMP_STRING_TYPE std::string
+ #include "XMP.hpp"
+ 
+-typedef void * LFA_FileRef;
++typedef int LFA_FileRef;
+ class XMPFileHandler;
+ 
+ // =================================================================================================
