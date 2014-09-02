@@ -1,0 +1,11 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FormatSupport/RIFF_Support.cpp.orig	2014-09-02 23:07:17.895859133 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FormatSupport/RIFF_Support.cpp	2014-09-02 23:07:25.345700639 +0100
+@@ -9,6 +9,8 @@
+ 
+ #include "RIFF_Support.hpp"
+ 
++#include <cstdlib>
++
+ #if XMP_WinBuild
+ 	#pragma warning ( disable : 4996 )	// '...' was declared deprecated
+ #endif

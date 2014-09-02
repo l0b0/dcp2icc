@@ -1,0 +1,11 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FileHandlers/AVCHD_Handler.cpp.orig	2014-09-02 22:56:25.593080698 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FileHandlers/AVCHD_Handler.cpp	2014-09-02 22:56:56.262427628 +0100
+@@ -11,6 +11,8 @@
+ 
+ #include "MD5.h"
+ 
++#include <cstdlib>
++
+ using namespace std;
+ 
+ // =================================================================================================

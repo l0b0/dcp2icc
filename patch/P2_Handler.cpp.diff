@@ -1,0 +1,11 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FileHandlers/P2_Handler.cpp.orig	2014-09-02 22:57:43.208094630 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FileHandlers/P2_Handler.cpp	2014-09-02 22:58:16.484052710 +0100
+@@ -11,6 +11,8 @@
+ 
+ #include "MD5.h"
+ 
++#include <cstdlib>
++
+ using namespace std;
+ 
+ // =================================================================================================

@@ -1,0 +1,10 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FormatSupport/XMPScanner.cpp.orig	2014-09-02 23:08:02.241582363 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FormatSupport/XMPScanner.cpp	2014-09-02 23:08:31.984282924 +0100
+@@ -21,6 +21,7 @@
+ 
+ #include <cassert>
+ #include <string>
++#include <cstring>
+ #include <cstdlib>
+ 
+ #if DEBUG

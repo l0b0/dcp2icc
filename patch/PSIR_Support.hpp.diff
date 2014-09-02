@@ -1,0 +1,11 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FormatSupport/PSIR_Support.hpp.orig	2014-09-02 23:06:24.666991528 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FormatSupport/PSIR_Support.hpp	2014-09-02 23:06:33.126811555 +0100
+@@ -18,6 +18,8 @@
+ #include "XMPFiles_Impl.hpp"
+ #include "EndianUtils.hpp"
+ 
++#include <cstdlib>
++
+ // =================================================================================================
+ /// \file PSIR_Support.hpp
+ /// \brief XMPFiles support for Photoshop image resources.

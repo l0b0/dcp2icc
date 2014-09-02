@@ -1,0 +1,11 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FileHandlers/XDCAMEX_Handler.cpp.orig	2014-09-02 23:03:36.693900523 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FileHandlers/XDCAMEX_Handler.cpp	2014-09-02 23:03:43.610419898 +0100
+@@ -11,6 +11,8 @@
+ #include "XDCAM_Support.hpp"
+ #include "MD5.h"
+ 
++#include <cstdlib>
++
+ using namespace std;
+ 
+ // =================================================================================================

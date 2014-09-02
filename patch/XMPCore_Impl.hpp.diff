@@ -1,0 +1,10 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPCore/XMPCore_Impl.hpp.orig	2014-09-02 22:36:09.822298153 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPCore/XMPCore_Impl.hpp	2014-09-02 22:36:18.362116375 +0100
+@@ -16,6 +16,7 @@
+ #include "client-glue/WXMPMeta.hpp"
+ 
+ #include <vector>
++#include <cstring>
+ #include <string>
+ #include <map>
+ 

@@ -1,0 +1,11 @@
+--- XMP-Toolkit-SDK-4.4.2/source/common/LargeFileAccess.cpp.orig	2014-09-02 23:41:53.748288968 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/common/LargeFileAccess.cpp	2014-09-02 23:44:05.015489803 +0100
+@@ -9,6 +9,8 @@
+ 
+ #include "LargeFileAccess.hpp"
+ 
++#include <inttypes.h>
++
+ extern void			LFA_Throw	( const char* msg, int id );
+ 
+ // =================================================================================================

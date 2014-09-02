@@ -12,6 +12,7 @@
 #include <stdio.h>  // The assert macro needs printf.
 #include "XMP_Environment.h"
 #include "XMP_Const.h"
+#include <cstring>
 #include <string>
 
 #include "EndianUtils.hpp"

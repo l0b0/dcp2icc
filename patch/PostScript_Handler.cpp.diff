@@ -1,0 +1,11 @@
+--- XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FileHandlers/PostScript_Handler.cpp.orig	2014-09-02 22:59:33.549078319 +0100
++++ XMP-Toolkit-SDK-4.4.2/source/XMPFiles/FileHandlers/PostScript_Handler.cpp	2014-09-02 22:59:45.365493358 +0100
+@@ -12,6 +12,8 @@
+ #include "Scanner_Handler.hpp"
+ #include "PostScript_Handler.hpp"
+ 
++#include <limits.h>
++
+ using namespace std;
+ 
+ // =================================================================================================
