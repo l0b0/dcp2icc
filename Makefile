@@ -1,6 +1,6 @@
-PATCH = patch
-SCONS = scons
-UNZIP = unzip -o
+PATCH = /usr/bin/patch
+SCONS = /usr/bin/scons
+UNZIP = /usr/bin/unzip -o
 
 all: compile
 
