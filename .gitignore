@@ -1,4 +1,5 @@
 build/
+dcp2icc
 dng_sdk_*/
 lcms-*/
 .sconsign.dblite

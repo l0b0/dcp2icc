@@ -16,7 +16,7 @@ else:
 	CPPDEFINES=[("UNIX_ENV",1),("_FILE_OFFSET_BITS",64)],
 	LIBS=["dng_1_2","XMPFiles-4.4.2","XMPCore-4.4.2","XMPcommon-4.4.2","expat","lcms","pthread"],
    	LINKFLAGS="",
-   	CCFLAGS="-m32 -O2 -iquote-",
+   	CCFLAGS="-m64 -O2 -iquote-",
    	LCMS_INCLUDE=None)
 
 SConscript("SConstruct.XMP", exports="env")

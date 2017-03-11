@@ -1,7 +1,7 @@
 #include <iostream>
 #include <icc34.h>
 #include <lcms.h>
-#include <malloc.h>
+#include <stdlib.h>
 #include <string.h>
 #include "dng_camera_profile.h"
 #include "dng_file_stream.h"
