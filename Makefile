@@ -1,3 +1,4 @@
+MAKE = /usr/bin/make
 PATCH = /usr/bin/patch
 SCONS = /usr/bin/scons
 UNZIP = /usr/bin/unzip -o
@@ -14,7 +15,7 @@ dependencies:
 	$(UNZIP) dng_sdk_*.zip
 	$(UNZIP) lcms-*.zip
 	$(UNZIP) XMP-Toolkit-SDK-*.zip
-	make patch
+	$(MAKE) patch
 
 compile: dependencies
 	$(SCONS)
